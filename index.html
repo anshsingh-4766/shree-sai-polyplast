@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shree Sai Polyplast</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <section class="hero">
+  <h2 class="hero-title">Welcome to Shree Sai Polyplast</h2>
+  <p class="hero-subtitle">Quality • Reliability • Innovation</p>
+</section>
+
+      <img src="./image/logo.jpg" alt="Shree Sai PolyPlast Logo" width="120" />
+      
+    </header>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="suppliers.html">Suppliers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+      <div class="section" id="about">
+        <h2>About Us</h2>
+        <p>
+          Shree Sai Polyplast is a leading manufacturer and supplier of premium
+          plastic packaging materials such as films, sheets, and sleeves. We are
+          committed to delivering top-notch quality and consistent performance
+          to our clients.
+        </p>
+      </div>
+
+      <div class="section" id="products">
+        <h2>Our Products</h2>
+        <ul>
+          <li>Plastic bags</li>
+          <li>Raw materials</li>
+        </ul>
+      </div>
+
+      <div class="section" id="suppliers">
+        <h2>Suppliers & Partnerships</h2>
+        <p>
+          We work closely with a network of reliable raw material suppliers to
+          ensure quality and timely production. We welcome new partners who are
+          passionate about delivering excellence in the plastic industry.
+        </p>
+      </div>
+
+      <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong><br>
+          Shree Sai Polyplast<br>
+          Gala No. 2 & 3, Deep Industrial Estate,<br>
+          Near Dadra Checkpost, Dadra And Nagar Haveli,<br>
+          Silvassa-396230, Dadra and Nagar Haveli and Daman and Diu, India</p>
+        <p><strong>Email:</strong> shreesaipolyplas1992@gmail.com</p>
+        <p><strong>Phone:</strong> +91-8044017637</p>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 1992 Shree Sai Polyplast. All rights reserved.
+    </footer>
+    <script>
+  // Highlight active section
+  const sections = document.querySelectorAll("div.section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 60;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+  
+  // Show/hide back to top button
+  const backToTopButton = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  });
+
+  // Scroll to top
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+  
+</script>
+
+</script>
+<button id="backToTop" title="Go to top">↑</button>
+
+  </body>
+  <button id="backToTop" title="Go to top">↑</button>
+
+</html>
